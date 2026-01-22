@@ -1,0 +1,48 @@
+/**
+ * Error codes used throughout the application.
+ * All errors should use these codes for consistent error handling.
+ */
+
+export enum ErrorCode {
+  // Generic errors
+  UNKNOWN_ERROR = 'UNKNOWN_ERROR',
+  INTERNAL_ERROR = 'INTERNAL_ERROR',
+  VALIDATION_ERROR = 'VALIDATION_ERROR',
+
+  // Authentication/Authorization
+  UNAUTHORIZED = 'UNAUTHORIZED',
+  FORBIDDEN = 'FORBIDDEN',
+
+  // Resource errors
+  NOT_FOUND = 'NOT_FOUND',
+  ALREADY_EXISTS = 'ALREADY_EXISTS',
+
+  // Platform errors
+  UNSUPPORTED_PLATFORM = 'UNSUPPORTED_PLATFORM',
+  INVALID_URL = 'INVALID_URL',
+
+  // Download errors
+  DOWNLOAD_FAILED = 'DOWNLOAD_FAILED',
+  DOWNLOAD_TIMEOUT = 'DOWNLOAD_TIMEOUT',
+  CONTENT_UNAVAILABLE = 'CONTENT_UNAVAILABLE',
+
+  // Transcription errors
+  TRANSCRIPTION_FAILED = 'TRANSCRIPTION_FAILED',
+  AUDIO_TOO_LONG = 'AUDIO_TOO_LONG',
+  AUDIO_TOO_SHORT = 'AUDIO_TOO_SHORT',
+  EMPTY_TRANSCRIPT = 'EMPTY_TRANSCRIPT',
+
+  // Structuring errors
+  STRUCTURING_FAILED = 'STRUCTURING_FAILED',
+  NO_RECIPE_DETECTED = 'NO_RECIPE_DETECTED',
+  LOW_CONFIDENCE = 'LOW_CONFIDENCE',
+
+  // Rate limiting
+  RATE_LIMITED = 'RATE_LIMITED',
+  QUOTA_EXCEEDED = 'QUOTA_EXCEEDED',
+
+  // Job errors
+  JOB_NOT_FOUND = 'JOB_NOT_FOUND',
+  JOB_ALREADY_COMPLETED = 'JOB_ALREADY_COMPLETED',
+  JOB_CANCELLED = 'JOB_CANCELLED',
+}
