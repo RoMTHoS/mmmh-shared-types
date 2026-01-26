@@ -19,6 +19,9 @@ export type {
 export type {
   JobStatus,
   ProcessingStep,
+  ImportType,
   JobError,
+  ExtractionJobData,
+  ExtractionJobResult,
   ExtractionJob,
 } from './job.js';

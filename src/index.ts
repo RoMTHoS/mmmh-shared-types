@@ -14,7 +14,10 @@ export type {
   IAIPipelineService,
   JobStatus,
   ProcessingStep,
+  ImportType,
   JobError,
+  ExtractionJobData,
+  ExtractionJobResult,
   ExtractionJob,
 } from './models/index.js';
 

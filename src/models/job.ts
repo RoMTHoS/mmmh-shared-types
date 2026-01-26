@@ -16,11 +16,34 @@ export type ProcessingStep =
   | 'validating'
   | 'complete';
 
+export type ImportType = 'video' | 'photo' | 'website';
+
 export interface JobError {
   code: ErrorCode;
   message: string;
   details?: Record<string, unknown>;
   retryable: boolean;
+}
+
+/**
+ * Data passed to a BullMQ job for recipe extraction.
+ */
+export interface ExtractionJobData {
+  jobId: string;
+  userId?: string;
+  importType: ImportType;
+  sourceUrl: string;
+  platform: Platform;
+  currentStep?: ProcessingStep;
+  createdAt: string;
+}
+
+/**
+ * Result returned by a completed extraction job.
+ */
+export interface ExtractionJobResult {
+  recipe: Recipe;
+  processingTimeMs: number;
 }
 
 export interface ExtractionJob {
