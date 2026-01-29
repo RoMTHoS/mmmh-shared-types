@@ -36,6 +36,12 @@ export interface ExtractionJobData {
   platform: Platform;
   currentStep?: ProcessingStep;
   createdAt: string;
+  /**
+   * Optional pre-fetched HTML content for website imports.
+   * When provided, the job processor uses /scrape/parse instead of /scrape
+   * to bypass bot detection on sites that block server-side requests.
+   */
+  html?: string;
 }
 
 /**
