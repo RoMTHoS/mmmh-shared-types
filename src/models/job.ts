@@ -12,6 +12,8 @@ export type ProcessingStep =
   | 'downloading'
   | 'extracting_audio'
   | 'transcribing'
+  | 'scraping'
+  | 'parsing'
   | 'structuring'
   | 'validating'
   | 'complete';
