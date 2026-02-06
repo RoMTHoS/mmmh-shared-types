@@ -44,6 +44,11 @@ export interface ExtractionJobData {
    * to bypass bot detection on sites that block server-side requests.
    */
   html?: string;
+  /**
+   * Path to uploaded photo file for photo imports.
+   * The file is stored temporarily and should be deleted after processing.
+   */
+  photoPath?: string;
 }
 
 /**
