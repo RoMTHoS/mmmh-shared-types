@@ -16,7 +16,10 @@ export type ProcessingStep =
   | 'parsing'
   | 'structuring'
   | 'validating'
-  | 'complete';
+  | 'complete'
+  // Photo-specific steps
+  | 'processing_image'
+  | 'extracting_text';
 
 export type ImportType = 'video' | 'photo' | 'website';
 
