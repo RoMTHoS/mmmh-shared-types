@@ -52,6 +52,11 @@ export interface ExtractionJobData {
    * The file is stored temporarily and should be deleted after processing.
    */
   photoPath?: string;
+  /**
+   * Paths to multiple uploaded photo files for batch photo imports.
+   * Each file is processed sequentially and OCR text is concatenated.
+   */
+  photoPaths?: string[];
 }
 
 /**
