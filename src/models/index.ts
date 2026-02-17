@@ -21,6 +21,8 @@ export type {
   ProcessingStep,
   ImportType,
   JobError,
+  PipelineType,
+  PipelineInfo,
   ExtractionJobData,
   ExtractionJobResult,
   ExtractionJob,

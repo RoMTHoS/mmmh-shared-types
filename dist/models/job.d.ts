@@ -15,13 +15,18 @@ export interface JobError {
 /**
  * Data passed to a BullMQ job for recipe extraction.
  */
+export type PipelineType = 'vps' | 'gemini';
 export interface ExtractionJobData {
     jobId: string;
     userId?: string;
+    /** Device identifier for plan-based pipeline routing. */
+    deviceId?: string;
     importType: ImportType;
     sourceUrl: string;
     platform: Platform;
     currentStep?: ProcessingStep;
+    /** Which pipeline is processing this job (set by AI pipeline after routing). */
+    pipeline?: PipelineType;
     createdAt: string;
     /**
      * Optional pre-fetched HTML content for website imports.
@@ -43,9 +48,17 @@ export interface ExtractionJobData {
 /**
  * Result returned by a completed extraction job.
  */
+export interface PipelineInfo {
+    pipeline: PipelineType;
+    processingTimeMs: number;
+    confidence: number;
+    fallbackUsed: boolean;
+    fallbackReason?: string;
+}
 export interface ExtractionJobResult {
     recipe: Recipe;
     processingTimeMs: number;
+    pipelineInfo?: PipelineInfo;
 }
 export interface ExtractionJob {
     id: string;
