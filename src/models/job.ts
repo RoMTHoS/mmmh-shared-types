@@ -21,7 +21,7 @@ export type ProcessingStep =
   | 'processing_image'
   | 'extracting_text';
 
-export type ImportType = 'video' | 'photo' | 'website';
+export type ImportType = 'video' | 'photo' | 'website' | 'text';
 
 export interface JobError {
   code: ErrorCode;
@@ -63,6 +63,8 @@ export interface ExtractionJobData {
    * Each file is processed sequentially and OCR text is concatenated.
    */
   photoPaths?: string[];
+  /** Raw text content for text imports. */
+  text?: string;
   /** Force premium (Gemini) pipeline for this import. */
   forcePremium?: boolean;
 }

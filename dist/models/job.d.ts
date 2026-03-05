@@ -5,7 +5,7 @@ import type { Recipe, Platform } from './recipe.js';
 import type { ErrorCode } from '../errors/codes.js';
 export type JobStatus = 'pending' | 'processing' | 'completed' | 'failed';
 export type ProcessingStep = 'queued' | 'downloading' | 'extracting_audio' | 'transcribing' | 'scraping' | 'parsing' | 'structuring' | 'validating' | 'complete' | 'processing_image' | 'extracting_text';
-export type ImportType = 'video' | 'photo' | 'website';
+export type ImportType = 'video' | 'photo' | 'website' | 'text';
 export interface JobError {
     code: ErrorCode;
     message: string;
@@ -44,6 +44,8 @@ export interface ExtractionJobData {
      * Each file is processed sequentially and OCR text is concatenated.
      */
     photoPaths?: string[];
+    /** Raw text content for text imports. */
+    text?: string;
     /** Force premium (Gemini) pipeline for this import. */
     forcePremium?: boolean;
 }
