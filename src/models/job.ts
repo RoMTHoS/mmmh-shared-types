@@ -63,6 +63,8 @@ export interface ExtractionJobData {
    * Each file is processed sequentially and OCR text is concatenated.
    */
   photoPaths?: string[];
+  /** Force premium (Gemini) pipeline for this import. */
+  forcePremium?: boolean;
 }
 
 /**
