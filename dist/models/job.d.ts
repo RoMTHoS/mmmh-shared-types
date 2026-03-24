@@ -46,6 +46,8 @@ export interface ExtractionJobData {
     photoPaths?: string[];
     /** Raw text content for text imports. */
     text?: string;
+    /** Thumbnail URL from oEmbed or OG scraping (passed through to final recipe). */
+    thumbnailUrl?: string;
     /** Force premium (Gemini) pipeline for this import. */
     forcePremium?: boolean;
 }
