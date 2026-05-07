@@ -20,6 +20,7 @@ export enum ErrorCode {
   // Platform errors
   UNSUPPORTED_PLATFORM = 'UNSUPPORTED_PLATFORM',
   INVALID_URL = 'INVALID_URL',
+  VIDEO_TOO_LONG = 'VIDEO_TOO_LONG',
 
   // Photo/Image errors
   INVALID_FILE_TYPE = 'INVALID_FILE_TYPE',
