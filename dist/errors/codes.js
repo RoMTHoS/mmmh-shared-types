@@ -20,6 +20,7 @@ var ErrorCode;
     // Platform errors
     ErrorCode["UNSUPPORTED_PLATFORM"] = "UNSUPPORTED_PLATFORM";
     ErrorCode["INVALID_URL"] = "INVALID_URL";
+    ErrorCode["VIDEO_TOO_LONG"] = "VIDEO_TOO_LONG";
     // Photo/Image errors
     ErrorCode["INVALID_FILE_TYPE"] = "INVALID_FILE_TYPE";
     ErrorCode["FILE_TOO_LARGE"] = "FILE_TOO_LARGE";
